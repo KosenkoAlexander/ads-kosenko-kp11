@@ -1,0 +1,39 @@
+using System;
+
+namespace lab1
+{
+	class Program
+	{
+		public static void Main(string[] args)
+		{
+			Console.WriteLine("insert x, y, z");
+			double x = Convert.ToDouble(Console.ReadLine());
+			double y = Convert.ToDouble(Console.ReadLine());
+			double z = Convert.ToDouble(Console.ReadLine());
+			double a=0, b=0;
+			bool a1=true, b1=true;
+			if(y<=0&&x!=0||x*z!=-2){
+				a=Math.Pow(x,-y)+z/(y*y+1)+Math.Pow(y/(x*z+2),1.0/3);
+				if(2*a%Math.PI!=0){
+					a=Math.Tan(a);
+					if(z!=0){
+						b=Math.Sin((x+Math.PI*y)/z);
+						if(b!=0)b=a/b;
+						else b1=false;
+					}
+					else b1=false;
+				}
+				else a1=false;
+			}
+			else a1=false;
+			Console.Write("a = ");
+			if(a1)Console.WriteLine(a);
+			else Console.WriteLine("err");
+			Console.Write("b = ");
+			if(b1)Console.WriteLine(b);
+			else Console.WriteLine("err");
+			Console.Write("Press any key to continue . . . ");
+			Console.ReadKey(true);
+		}
+	}
+}
