@@ -12,7 +12,7 @@ namespace lab1
 			double z = Convert.ToDouble(Console.ReadLine());
 			double a=0, b=0;
 			bool a1=true, b1=true;
-			if(y<=0&&x!=0||x*z!=-2){
+			if(y<=0&&x!=0&&x*z!=-2){
 				a=Math.Pow(x,-y)+z/(y*y+1)+Math.Pow(y/(x*z+2),1.0/3);
 				if(2*a%Math.PI!=0){
 					a=Math.Tan(a);
